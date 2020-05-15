@@ -1,11 +1,12 @@
 <h2></h2>
 <h5>All Breweries</h5>
-<div class="form-group row">
-  <mat-form-field>
-      <input matInput type="text" class="form-control" [(ngModel)]="searchText" placeholder="Search">
-  </mat-form-field>
-</div>
+
 <mat-card>
+  <div class="form-group row">
+    <mat-form-field>
+        <input matInput type="text" class="form-control" [(ngModel)]="searchText" placeholder="Search">
+    </mat-form-field>
+  </div>
 <ul *ngIf="brews">
   
   <li *ngFor="let brew of brews | search: {state: term} | search: {name: searchText}">
@@ -18,4 +19,5 @@
             </i> </button> </a></mat-card>
   </li>
 </ul>
+</mat-card>
 
