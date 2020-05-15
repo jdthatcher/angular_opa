@@ -1,0 +1,43 @@
+<h2></h2>
+<h5>Welcome  {{ name }}</h5>
+
+<mat-card>
+
+        <mat-form-field>
+                <input matInput placeholder="Enter your name"  [(ngModel)]="name"> 
+              </mat-form-field>
+
+
+</mat-card>
+
+<mat-card>
+    <p>You've clicked <button mat-raised-button color="accent" (click)="countClick()">this</button> {{ clickCounter }} times.</p>
+</mat-card>
+
+<mat-card [ngClass]="setClasses()">
+        <ng-template [ngIf]="clickCounter > 4" [ngIfElse]="none">
+            <p>The click counter <strong>IS GREATER</strong> than 4.</p>
+        </ng-template>
+    
+        <ng-template #none>
+            <p>The click counter is <strong>not greater</strong> than 4.</p>
+        </ng-template>
+    </mat-card>
+
+
+<mat-card>
+<div class="example-container"
+    [class.mat-elevation-z2]="!isActive"
+    [class.mat-elevation-z12]="isActive">
+    I can fly
+</div>
+
+<button mat-raised-button color="accent" (click)="isActive = !isActive">Toggle Elevation</button>
+</mat-card>
+
+<mat-card>
+    <strong>API</strong> https://www.openbrewerydb.org
+</mat-card>
+
+
+

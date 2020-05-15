@@ -1,0 +1,21 @@
+<h2></h2>
+<h5>All Breweries</h5>
+<div class="form-group row">
+  <mat-form-field>
+      <input matInput type="text" class="form-control" [(ngModel)]="searchText" placeholder="Search">
+  </mat-form-field>
+</div>
+<mat-card>
+<ul *ngIf="brews">
+  
+  <li *ngFor="let brew of brews | search: {state: term} | search: {name: searchText}">
+      <mat-card>
+    <p class="name">{{ brew.name }}</p>
+    <p class="country">{{ brew.city }}</p>
+    <p class="country">{{ brew.state }}</p>
+    <a class="site" href="{{ brew.website_url }}"> <button mat-raised-button> <i class="material-icons">
+            language
+            </i> </button> </a></mat-card>
+  </li>
+</ul>
+

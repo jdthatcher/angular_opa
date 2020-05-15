@@ -1,0 +1,16 @@
+<h2></h2>
+<h5>Tennesse Breweries</h5>
+<mat-card>
+<ul *ngIf="brews">
+  
+  <li *ngFor="let brew of brews">
+      <mat-card>
+    <p class="name">{{ brew.city }}</p>
+    <p class="country">{{ brew.name }}</p>
+    <a class="site" href="{{ brew.website_url }}"> <button mat-raised-button> <i class="material-icons">
+            language
+            </i> </button> </a></mat-card>
+  </li>
+</ul>
+
+

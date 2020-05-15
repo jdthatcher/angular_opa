@@ -1,0 +1,36 @@
+
+
+
+    <mat-toolbar color="primary" class="mat-elevation-z4">
+       
+      
+      
+      
+        <mat-toolbar-row>
+            <a routerLink="/" class="logo">comsynth angular app</a>
+          <span class="spacer"></span>
+          <nav>
+              <ul>
+                 <button mat-raised-button color="primary" ><a href="#" routerLink="/" >Home</a></button>
+                 <button mat-raised-button color="primary" ><a href="#" routerLink="/all">All Breweries</a></button>
+                 <!-- <button mat-raised-button color="primary" ><a href="#" routerLink="/all" [queryParams]="{column: 'state', term:'Alabama'}" >AL Breweries</a></button> -->
+                 <button mat-raised-button color="primary" ><a href="#" routerLink="/tn">TN Breweries</a></button>
+                 <button mat-raised-button color="primary" ><a href="#" routerLink="/newyork">NY Breweries</a></button>
+             
+             
+              </ul>
+            </nav>
+        </mat-toolbar-row>
+      </mat-toolbar>
+
+      
+
+<div class="container">
+ 
+  
+</div>
+
+
+<div class="container">
+<router-outlet></router-outlet>
+</div>
